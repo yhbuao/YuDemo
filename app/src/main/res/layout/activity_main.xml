@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/view_group"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="haibo.yudemo.MainActivity" xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <FrameLayout
+        android:id="@+id/main_frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#36b9b0">
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="好吧男减肥的"/>
+    </FrameLayout>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#f5f9f7"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radioButton1"
+            style="@style/main_tab_style"
+            android:checked="true"
+            android:drawableTop="@drawable/main_footbar_button1"
+            android:text="测试"/>
+        <RadioButton
+            android:id="@+id/radioButton2"
+            style="@style/main_tab_style"
+            android:drawableTop="@drawable/main_footbar_button2"
+            android:text="测试"/>
+        <RadioButton
+            android:id="@+id/radioButton3"
+            style="@style/main_tab_style"
+            android:drawableTop="@drawable/main_footbar_button3"
+            android:text="测试"/>
+        <RadioButton
+            android:id="@+id/radioButton4"
+            style="@style/main_tab_style"
+            android:drawableTop="@drawable/main_footbar_button4"
+            android:text="测试"/>
+
+    </RadioGroup>
+
+</LinearLayout>
