@@ -2,9 +2,9 @@ package haibo.library.navigationbar;
 
 import android.app.Activity;
 import android.content.Context;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -37,8 +37,9 @@ public abstract class AbsNavigationBar<p extends AbsNavigationBar.Builder.AbsNav
     private void createAndBindView() {
         if (mBarParams.mParent == null) {
             //获取Activity的跟布局
-            ViewGroup activityRoot = ((Activity) mBarParams.mContext).findViewById(android.R.id.content);
+            ViewGroup activityRoot = (ViewGroup) ((Activity) mBarParams.mContext).getWindow().getDecorView();
             mBarParams.mParent = (ViewGroup) activityRoot.getChildAt(0);
+            Log.e("AbsNavigationBar:", "--->>" + mBarParams.mParent);
         }
         if (mBarParams.mParent == null) {
             return;
@@ -74,10 +75,7 @@ public abstract class AbsNavigationBar<p extends AbsNavigationBar.Builder.AbsNav
         View view = findViewById(viewId);
         if (view instanceof Toolbar) {
             Toolbar toolbar = (Toolbar) view;
-            ((AppCompatActivity) mBarParams.mContext).setSupportActionBar(toolbar);
-            ((AppCompatActivity) mBarParams.mContext).getSupportActionBar().setDisplayShowTitleEnabled(false);
             if (resId == 0) {
-                toolbar.setNavigationIcon(toolbar.getNavigationIcon());
                 return;
             }
             toolbar.setNavigationIcon(resId);

@@ -3,7 +3,6 @@ package haibo.yudemo;
 import android.content.Intent;
 import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -27,17 +26,16 @@ public class MainActivity extends BaseActivity {
     @Override
     protected void initTitle() {
         DefaultNavigationBar defaultNavigationBar = new DefaultNavigationBar.Builder(this)
-                .setTitle("第一个")
+                .setTitle("第")
                 .setLeftIcon(R.mipmap.zw_info_icon_previous)
                 .setRightClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(MainActivity.this, "点击啦！", Toast.LENGTH_LONG).show();
+                       startActivity(new Intent(MainActivity.this,Main2Activity.class));
                     }
                 })
                 .setRightIcon(R.mipmap.ic_launcher)
                 .builder();
-        defaultNavigationBar.textView.setText("干啥");
     }
 
     @Override
