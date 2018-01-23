@@ -11,7 +11,7 @@ import haibo.library.R;
 /**
  * @author: yuhaibo
  * @time: 2018/1/18 11:37.
- * projectName: xhhread-android.
+ * projectName: YuDemo.
  * Description:默认的NavigationBar
  */
 
@@ -24,7 +24,7 @@ public class DefaultNavigationBar extends AbsNavigationBar<DefaultNavigationBar.
 
     @Override
     public int bindHeadLayoutId() {
-        return R.layout.layout1;
+        return R.layout.headview;
     }
 
     @Override

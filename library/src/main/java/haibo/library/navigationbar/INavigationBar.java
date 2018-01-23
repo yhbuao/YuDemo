@@ -3,7 +3,7 @@ package haibo.library.navigationbar;
 /**
  * @author: yuhaibo
  * @time: 2018/1/18 11:11.
- * projectName: xhhread-android.
+ * projectName: YuDemo.
  * Description:定义一套导航栏规范
  */
 

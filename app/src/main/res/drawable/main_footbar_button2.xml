@@ -1,5 +1,5 @@
 <selector
     xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:drawable="@mipmap/xhh_icon_sk" android:state_checked="false"></item>
-    <item android:drawable="@mipmap/xhh_icon_sk_down" android:state_checked="true"></item>
+    <item android:drawable="@mipmap/icon_eye" android:state_checked="false"></item>
+    <item android:drawable="@mipmap/icon_eye_down" android:state_checked="true"></item>
 </selector>

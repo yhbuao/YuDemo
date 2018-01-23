@@ -14,7 +14,7 @@ import android.widget.TextView;
 /**
  * @author: yuhaibo
  * @time: 2018/1/18 11:16.
- * projectName: xhhread-android.
+ * projectName: YuDemo.
  * Description:基本的NavigationBar
  */
 

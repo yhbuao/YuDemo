@@ -31,7 +31,7 @@ public class MainActivity extends BaseActivity {
                 .setRightClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                       startActivity(new Intent(MainActivity.this,Main2Activity.class));
+                        startActivity(new Intent(MainActivity.this, Main2Activity.class));
                     }
                 })
                 .setRightIcon(R.mipmap.ic_launcher)
