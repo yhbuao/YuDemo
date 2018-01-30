@@ -2,10 +2,11 @@ package haibo.yudemo;
 
 import android.content.Intent;
 import android.net.Uri;
-import android.webkit.WebView;
-import android.webkit.WebViewClient;
 import android.widget.Button;
 import android.widget.Toast;
+
+import com.orhanobut.logger.AndroidLogAdapter;
+import com.orhanobut.logger.Logger;
 
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -13,8 +14,6 @@ import haibo.yudemo.base.BaseActivity;
 
 public class Main2Activity extends BaseActivity {
 
-    @BindView(R.id.webView)
-    WebView mWebView;
     @BindView(R.id.bt)
     Button mBt;
 
@@ -30,13 +29,12 @@ public class Main2Activity extends BaseActivity {
 
     @Override
     protected void initView() {
-
+        Logger.addLogAdapter(new AndroidLogAdapter());
+        Logger.t("main").d("Main2Activity : ");
     }
 
     @Override
     protected void initData() {
-        mWebView.loadUrl("http://sj.qq.com/myapp/detail.htm?apkName=com.xhhread");
-        mWebView.setWebViewClient(new WebViewClient());
     }
 
     @OnClick(R.id.bt)

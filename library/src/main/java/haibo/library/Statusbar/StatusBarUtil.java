@@ -1,4 +1,4 @@
-package haibo.yudemo.Statusbar;
+package haibo.library.Statusbar;
 
 import android.annotation.TargetApi;
 import android.app.Activity;
@@ -49,8 +49,8 @@ public class StatusBarUtil {
      * @param colorId
      */
     public static void setStatusBarColor(Activity activity, int colorId) {
-        //Android5.0（API 21）以上，系统方法
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+        //Android6.0（API 23）以上，系统方法
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             Window window = activity.getWindow();
             window.setStatusBarColor(activity.getResources().getColor(colorId));
         } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
@@ -85,8 +85,7 @@ public class StatusBarUtil {
                     setMIUIStatusBarTextMode(activity, isTextDark);
                 } else if (OSUtil.isFlyme()) {
                     //魅族flyme系统
-//                    setFlymeStatusBarTextMode(activity, isTextDark);
-                    StatusbarColorUtils.setStatusBarDarkIcon(activity, isTextDark);
+                    StatusbarColorUtils.setStatusBarDarkIcon(activity,  true);
                 } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                     //6.0以上，调用系统方法
                     Window window = activity.getWindow();

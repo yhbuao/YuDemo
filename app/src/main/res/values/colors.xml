@@ -4,5 +4,6 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="mainFoolbarText">#575757</color>
-    <color name="statusBarColor">#e46f1c</color>
+    <color name="statusBarColor">#FFFFFF</color>
+    <color name="white">#FFFFFF</color>
 </resources>

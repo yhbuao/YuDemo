@@ -1,4 +1,4 @@
-package haibo.yudemo.Statusbar;
+package haibo.library.Statusbar;
 
 import android.app.Activity;
 import android.os.Build;

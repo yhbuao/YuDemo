@@ -8,8 +8,8 @@ import android.view.View;
 
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
+import haibo.library.Statusbar.StatusBarUtil;
 import haibo.yudemo.R;
-import haibo.yudemo.Statusbar.StatusBarUtil;
 
 /**
  * @author: yuhaibo
@@ -27,6 +27,8 @@ public abstract class BaseActivity extends AppCompatActivity {
         setContentView(contentViewRes());
         //根据状态栏颜色来决定状态栏文字用黑色还是白色
         StatusBarUtil.setStatusBarMode(this, true, R.color.statusBarColor);
+        //设置所有Activity界面背景默认为白色
+        //((ViewGroup) findViewById(android.R.id.content).getParent()).setBackgroundColor(Color.BLACK);
         //butterKnife绑定
         unbinder = ButterKnife.bind(this);
 
