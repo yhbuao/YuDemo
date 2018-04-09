@@ -39,7 +39,7 @@ public class Main2Activity extends BaseActivity {
 
     @OnClick(R.id.bt)
     public void onViewClicked() {
-        Toast.makeText(this,"dianji", Toast.LENGTH_LONG).show();
+        Toast.makeText(this, "dianji", Toast.LENGTH_LONG).show();
         Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.baidu.com/"));
         startActivity(intent);
     }
